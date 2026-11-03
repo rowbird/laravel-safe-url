@@ -1,0 +1,6 @@
+providers:
+  - Rowbird\SafeUrl\SafeUrlServiceProvider
+
+env:
+  - SAFE_URL_CLOUDFLARE=false
+  - CACHE_STORE=array

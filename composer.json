@@ -1,0 +1,64 @@
+{
+    "name": "rowbird/laravel-safe-url",
+    "description": "Laravel validation rules that block adult, malware, phishing and gambling URLs using offline blocklists, family DNS resolvers, Google Safe Browsing and page inspection.",
+    "keywords": ["laravel", "validation", "url", "nsfw", "adult", "porn", "malware", "phishing", "blocklist", "safe-browsing", "content-filter"],
+    "homepage": "https://github.com/rowbird/laravel-safe-url",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fabio Selau",
+            "homepage": "https://selau.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-pdo": "*",
+        "guzzlehttp/guzzle": "^7.8",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/validation": "^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0",
+        "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "Required by the offline blocklist detector.",
+        "ext-intl": "Lets internationalized domain names (IDN) be normalized before lookup."
+    },
+    "autoload": {
+        "psr-4": {
+            "Rowbird\\SafeUrl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rowbird\\SafeUrl\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rowbird\\SafeUrl\\SafeUrlServiceProvider"
+            ],
+            "aliases": {
+                "SafeUrl": "Rowbird\\SafeUrl\\Facades\\SafeUrl"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

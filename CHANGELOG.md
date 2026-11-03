@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 - Unreleased
+## 0.1.0 - 2026-11-03
 
 - `safe_url`, `not_adult`, `not_malware`, `not_phishing`, `not_gambling` string rules and the fluent `SafeUrl::rule()` / `Rule::safeUrl()`.
 - Detectors: adult and gambling top-level domains (.xxx, .porn, .adult, .sex, .casino, .poker, .bet), offline blocklist (SQLite), Cloudflare for Families DNS, Google Safe Browsing, page content (RTA label, meta rating, keywords).

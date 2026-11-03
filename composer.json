@@ -13,7 +13,9 @@
     ],
     "require": {
         "php": "^8.2",
+        "ext-curl": "*",
         "ext-pdo": "*",
+        "ext-pdo_sqlite": "*",
         "guzzlehttp/guzzle": "^7.8",
         "illuminate/console": "^12.0|^13.0",
         "illuminate/contracts": "^12.0|^13.0",
@@ -27,7 +29,6 @@
         "pestphp/pest-plugin-laravel": "^3.0|^4.0"
     },
     "suggest": {
-        "ext-pdo_sqlite": "Required by the offline blocklist detector.",
         "ext-intl": "Lets internationalized domain names (IDN) be normalized before lookup."
     },
     "autoload": {

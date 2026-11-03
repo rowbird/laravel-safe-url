@@ -34,7 +34,7 @@ php artisan safe-url:sync
 Schedule::command('safe-url:sync')->daily();
 ```
 
-Requires PHP 8.2+, Laravel 11, 12 or 13 and `ext-pdo_sqlite`. `ext-intl` is recommended for internationalized domains.
+Requires PHP 8.2+, Laravel 12 or 13 and `ext-pdo_sqlite`. `ext-intl` is recommended for internationalized domains.
 
 Optionally publish the config and translations:
 
